@@ -1,0 +1,21 @@
+
+body{
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: #FFFFFF;
+	background-color: dimgray;
+	margin: 0;
+	padding: 0;
+}
+.branding{
+	max-width: 100%;
+	text-align: center;
+	border-bottom: 5px solid darkred;
+}
+.branding span{
+	color: darkred;
+}
+.panelSideBySide{
+	display: inline-block;
+	max-width: 80%;
+	margin: 0 10%;
+}
