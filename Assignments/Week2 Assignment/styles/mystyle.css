@@ -1,13 +1,13 @@
 
 body{
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	color: red;
+	color: white;
 	background-color: dimgray;
 	margin: 0;
 	padding: 0;
 }
 .branding{
-	font-size: 4rem;
+	font-size: 4vw;
 	max-width: 100%;
 	text-align: center;
 	border-bottom: 5px solid darkred;
@@ -18,19 +18,28 @@ body{
 }
 .maininterface{
 	margin: 0 10%;
+}
+.windowSize50{
 	display: -webkit-flex;
 	display: flex;
-	width: 900px;
-	height: 1000px;
-	background-color: pink;
+	width: 100%;
+	height: 50vh;
+	justify-content: center;
 }
 .windowSize50 section{
-	width: 450px;
-	height: 500px;
-	border: 1px solid darkred;
+	width: 50%;
+	height: 100%;
+	border: 5px solid darkred;
+}
+.windowSize33{
+	display: -webkit-flex;
+	display: flex;
+	width: 100%;
+	height: 50vh;
+	justify-content: center;
 }
 .windowSize33 section{
-	width: 300px;
-	height: 500px;
-	border: 1px solid darkred;
+	width: 33.33%;
+	height: 100%;
+	border: 5px solid darkred;
 }
