@@ -1,0 +1,39 @@
+
+body {
+	width: 600px;
+	background-color: #1e5799;
+	margin-left: 150px;  
+	background: -moz-linear-gradient(top, #1e5799 0%, #000000 100%); 
+	background: -webkit-linear-gradient(top, #1e5799 0%,#000000 100%); 
+	background: linear-gradient(to bottom, #1e5799 0%,#000000 100%); 
+	color: #CCC;
+	font-family: sans-serif;
+	line-height: 130%;
+}
+
+a, h1, h2, h3 {
+	color: #FFF;
+	
+}
+
+em {
+	font-weight: bold;
+	color: #FFF;
+}
+
+footer {
+	color: #666;
+	border: 1px solid #666;
+	border-radius: 3px;
+	padding: 3px 5px;
+	text-align: right;
+}
+
+.bass {
+	color: #66AACC;
+}
+
+.highlight {
+	color : #ff0000;
+}
+

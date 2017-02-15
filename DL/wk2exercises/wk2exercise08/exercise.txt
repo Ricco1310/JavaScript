@@ -1,0 +1,14 @@
+Given is a HTML-page about guitars. In this exercise you will practice with accessing certain nodes and reaching certain properties of these nodes. Show all results in the console.
+
+1) Show the innerHTML of the introduction in the console
+2) Use JavaScript to count the letters in the introduction.
+3) Use JavaScript to count the words in the introduction.  (tip: convert the text to an array)
+
+4) Use JavaScript to count how many paragraphs this webpage has
+5) Use JavaScript to count how many artists are mentioned on this page. (tip: use getElementsByClassName())
+6) Use JavaScript to count how many artists are mentioned in the ‘Electric’ section of the page.
+
+7) Use JavaScript to determine what the className is of the 9th paragraph. 
+
+8) Use JavaScript to determine what the href of the first link on the page is.
+9) Use JavaScript to determine what the hrefs of all the links on the page are. show them in the console one by one.

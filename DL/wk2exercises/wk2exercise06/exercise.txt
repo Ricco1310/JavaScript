@@ -1,0 +1,5 @@
+Use the template for this exercise. For this exercise you will calculate exactly how old you are in milliseconds. Create two variables. One is called today with the value of today’s date. And one is called birthday and it contains your birthday.
+
+Now make another variable named age. To get your age in milliseconds subtract your birthday (in milliseconds) from today (in milliseconds) and assign this to the variable age. Finally show your age in an alertbox and test in your browser.
+
+Try to extend the exercise by showing your age in years instead of milliseconds.

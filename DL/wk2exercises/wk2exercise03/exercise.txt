@@ -1,0 +1,10 @@
+Use the template for this exercise. Create a function that calculates the surface
+area of a circle. This function will have a parameter representing the radius of this circle and will show the result in an alertbox. To calculate the surface area, use the following formula:
+
+surfaceArea = π * radius * radius
+
+Call the function with an appropriate value and test in your browser.
+
+1: Change the code in de function so the number shown in the alertbox is rounded to 2 decimals.
+
+2: Imagine that user input is used for this function. Change the code in the function so that the function checks if the value it’s given is a number. If it isn’t a number the message ‘Oops. you didn't type a number’ should be shown in the alertbox.

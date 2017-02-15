@@ -1,0 +1,5 @@
+Use the template for this exercise. Create an array called wardrobe. List as many things you can think of and add them to this array. Each wardrobe item should become its own element in the array.
+
+Log the entire array in the console and use the browsers console to look at the result. Finally show the number of items the array holds in an alertbox.
+
+There are many ways to create an array. Once you finished the exercise one way, change the code to other ways of creating an array.

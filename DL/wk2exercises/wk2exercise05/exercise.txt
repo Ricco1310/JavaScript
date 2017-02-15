@@ -1,0 +1,1 @@
+Use JavaScript to find out on what day of the week you were born.

@@ -1,0 +1,4 @@
+Use the template for this exercise. Create an array called grades and give at least 5 numerical values. These values represent your grades. Now write the code to calculate your average grade. The code must be written in a way that it will work regardless of how many grades the array contains.
+
+tip1: Declare a variable to store the total number. The initial value of this variable is 0.
+tip2: Use a for-loop to go through the array and add the value of each element to the total.

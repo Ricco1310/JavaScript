@@ -1,0 +1,9 @@
+Given is a HTML-page about guitars. In this exercise you will practice with adding new nodes to the pages with JavaScript. 
+
+1) Add a footer element at the end of the body that contains the following text ‘copyright: I don't know media.’
+
+2) Add elements the page that accommodate a new instrument paragraph at the end of the acoustic section. Use the following text and make sure to look at the other instrument paragraphs for the format. Also give the new paragraph the id ‘Ukelele’
+
+Ukuleles are commonly associated with music from Hawaii where the name roughly translates as "jumping flea", perhaps because of the movement of the player's fingers. Legend attributes it to the nickname of the Englishman Edward William Purvis, one of King Kalākaua's officers, because of his small size, fidgety manner, and playing expertise. According to Queen Liliʻuokalani, the last Hawaiian monarch, the name means "the gift that came here", from the Hawaiian words uku (gift or reward) and lele (to come).
+
+3) Add a link to the menu at the top of the page directly under ‘Acoustic Bass Guitars’. The word ‘Ukelele’ should be clickable and the href should be set to ‘#Ukelele’.

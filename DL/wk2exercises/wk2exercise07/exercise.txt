@@ -1,0 +1,9 @@
+Use the template for this exercise. Make two new objects named student1 and student2. Both should have the properties name, birthday and jsSkill. Fill in your own values for student1 and that of a classmate for student two. 
+
+Create a function named logStudent and attach it as a method to student1 and student2. This method should show the following message in the console ‘Chris was born in 1981 and scores 5 at JavaScript.’ (where the name, birth year and jsSkill are filled in according to the values of the properties)
+
+Test your code by calling the methods and loading the the page in the browser.
+
+After this, create another method named levelUp. When called, this method should add 1 to the students jsSkill and show the following message in the console ’Chris just leveled up, his current skill is 6’ (where the name and jsSkill are filled in according to the values of the properties)
+
+Test you code by leveling up student1.

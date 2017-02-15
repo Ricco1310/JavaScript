@@ -1,0 +1,7 @@
+Use the template for this exercise. For this exercise you will create a rudimentary email checker. Create a function that accepts an email address as a parameter. This function will do some checks on this parameter and return either true or false. 
+
+1. If the email address does nog contain an @-symbol, the message ‘Email check failed. Missing @‘ will be shown in the console and the function will be terminated with the return value false.
+2. If the email address does nog contain a . (dot), the message ‘Email check failed. Missing .‘ will be shown in the console and the function will be terminated with the return value false.
+3. In all other situations, the message 'Email check passed' will be shown in the console and the function will be terminated with the return value true.
+
+Call the function with correct and incorrect email addresses to check if if works.

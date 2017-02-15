@@ -1,0 +1,15 @@
+Given is a HTML-page about guitars. In this exercise you will practice with accessing certain nodes and then changing properties of these nodes. Thus changing the page through JavaScript.
+
+1) Select the introduction of the page and change the innerHTML to ‘This is the introduction’
+
+2) Select the h1 on the page and change the innerHTML to ‘Types of Pretty Guitars’.
+
+3) Select all instances of class bass and change the innerHTML to ‘bass players suck’
+
+4) Select all artists and put a * behind their names.
+
+5) Select all music styles and show them in all caps. 
+
+6) Select the section with id ‘Acoustic’ and give is the class ‘highlight’
+
+7) Select the first link on the page and change it’s href-attribute to ‘http://www.google.com'
