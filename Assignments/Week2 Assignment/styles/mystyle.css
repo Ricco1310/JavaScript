@@ -1,21 +1,36 @@
 
 body{
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	color: #FFFFFF;
+	color: red;
 	background-color: dimgray;
 	margin: 0;
 	padding: 0;
 }
 .branding{
+	font-size: 4rem;
 	max-width: 100%;
 	text-align: center;
 	border-bottom: 5px solid darkred;
+	padding-bottom: 1.5%;
 }
 .branding span{
 	color: darkred;
 }
-.panelSideBySide{
-	display: inline-block;
-	max-width: 80%;
+.maininterface{
 	margin: 0 10%;
+	display: -webkit-flex;
+	display: flex;
+	width: 900px;
+	height: 1000px;
+	background-color: pink;
+}
+.windowSize50 section{
+	width: 450px;
+	height: 500px;
+	border: 1px solid darkred;
+}
+.windowSize33 section{
+	width: 300px;
+	height: 500px;
+	border: 1px solid darkred;
 }
