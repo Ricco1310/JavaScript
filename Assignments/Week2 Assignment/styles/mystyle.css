@@ -49,3 +49,6 @@ body{
 	padding: 10px;
 	overflow: hidden;
 }
+textarea{
+	resize: none;
+}
