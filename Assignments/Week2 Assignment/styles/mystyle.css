@@ -1,6 +1,6 @@
 
 body{
-	font-family: cursive;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	color: white;
 	background-color: dimgray;
 	margin: 0;
@@ -49,6 +49,29 @@ body{
 	padding: 10px;
 	overflow: hidden;
 }
+input{
+	border: none;
+	border-bottom: 1px solid darkred;
+	background-color: dimgray;
+	margin-bottom: 20px;
+}
 textarea{
+	border: none;
+	box-sizing: border-box;
+	width: 100%;
+	height: 20vh;
+	outline: none;
+	box-shadow: none;
+	border-bottom: 1px solid darkred;
+	background-color: dimgray;
 	resize: none;
+	margin-bottom: 20px;
+}
+input[type=submit]{
+	border: 1px solid darkred;
+	background-color: darkslategray;
+}
+input:focus, textarea:focus{
+	transition: border 0.1s ease-out;
+	border-bottom: 5px solid darkred;
 }
