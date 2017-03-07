@@ -1,15 +1,6 @@
-var time = document.getElementById("time");
-var timer = 0;
-var timeRunning = false;
-function showTime(){
-    time.innerHTML = timer;
-    timer++;
-}
-function runTime(){
-    if(timeRunning){
-        showTime;
-    }
-}
-document.onclick = function(){
-    timeRunning = !timeRunning;
+var pos = 200;
+document.getElementById("mainHeading").onmouseover = function(){
+    pos += 100;
+    var tl1 = new TimelineMax();
+    tl1.to("#mainHeading", 2, {left: pos, color:"rgb(255,0,0)", ease: Bounce.easeOut});
 };
