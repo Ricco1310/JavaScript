@@ -1,13 +1,35 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Space Clock</title>
-		<link rel="stylesheet" type="text/css" href="styles/mystyle.css">
-	</head>
-	<body>
-		<p id="dateSetter"></p>
-		<p id="clockSetter"></p>
-		<script src="scripts/main.js"></script>
-	</body>
+
+<head>
+	<meta charset="utf-8">
+	<title>Space Clock</title>
+	<link rel="stylesheet" type="text/css" href="styles/mystyle.css">
+</head>
+
+<body>
+	<section class="clockContainer">
+		<p id="dateSetterPreOut" class="clock"><span></span> <span></span>-<span></span>-<span></span> </p>
+		<p id="clockSetterPreOut" class="clock"><span></span>:<span></span>:<span></span></p>
+	</section>
+	<section class="clockContainer">
+		<p id="dateSetterPre" class="clock"><span></span> <span></span>-<span></span>-<span></span> </p>
+		<p id="clockSetterPre" class="clock"><span></span>:<span></span>:<span></span></p>
+	</section>
+	<section class="clockContainer">
+		<p id="dateSetter" class="clock"><span></span> <span></span>-<span></span>-<span></span> </p>
+		<p id="clockSetter" class="clock"><span></span>:<span></span>:<span></span></p>
+	</section>
+	<section class="clockContainer">
+		<p id="dateSetterPast" class="clock"><span></span> <span></span>-<span></span>-<span></span> </p>
+		<p id="clockSetterPast" class="clock"><span></span>:<span></span>:<span></span></p>
+	</section>
+	<section class="clockContainer">
+		<p id="dateSetterPastOut" class="clock"><span></span> <span></span>-<span></span>-<span></span> </p>
+		<p id="clockSetterPastOut" class="clock"><span></span>:<span></span>:<span></span></p>
+	</section>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+	<script src="scripts/main.js"></script>
+</body>
+
 </html>
