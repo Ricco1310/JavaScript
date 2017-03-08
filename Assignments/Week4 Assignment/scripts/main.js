@@ -35,13 +35,13 @@ function updateTime(elementToChangeDate, elementToChangeClock) {
     TdayName = dayNumberToName(Tday);
     //update html date
 
-    //dateSetter.innerHTML = TdayName + " " + Tdate + " " + Tmonth + " " + TfullYear;
+    //elementToChangeDate.innerHTML = TdayName + " " + Tdate + " " + Tmonth + " " + TfullYear;
     //update html time
     elementToChangeDate.children[0].innerHTML = TdayName;
     elementToChangeDate.children[1].innerHTML = Tdate;
     elementToChangeDate.children[2].innerHTML = Tmonth;
     elementToChangeDate.children[3].innerHTML = TfullYear;
-    //clockSetter.innerHTML = Thours + " " + Tminutes + " " + Tseconds;
+    //elementToChangeClock.innerHTML = Thours + " " + Tminutes + " " + Tseconds;
     elementToChangeClock.children[0].innerHTML = Thours;
     elementToChangeClock.children[1].innerHTML = Tminutes;
     elementToChangeClock.children[2].innerHTML = Tseconds;
@@ -77,15 +77,24 @@ setInterval(updateTime(dateSetterPre, clockSetterPre), 100);
 setInterval(updateTime(dateSetter, clockSetter), 100);
 setInterval(updateTime(dateSetterPast, clockSetterPast), 100);
 setInterval(updateTime(dateSetterPastOut, clockSetterPastOut), 100);
-//setInterval(changeColor, 8000);
-//changeColor();
+setInterval(pushTime(), 1000);
 
 
 //start of animation coding
 
-function changeColor() {
-    t1.to("#clockSetter", 2, { color: "rgb(0,0,0)" })
-    t1.to("#clockSetter", 2, { color: "rgb(0,0,255)" })
-    t1.to("#clockSetter", 2, { color: "rgb(0,255,0)" })
+function pushTime() {
+    t1.to("#dateSetterPreOut", 2, { color: "rgb(0,0,0)" })
+    t1.to("#clockSetterPreOut", 2, { color: "rgb(0,0,255)" })
+
+    t1.to("#dateSetterPre", 2, { color: "rgb(0,255,0)" })
+    t1.to("#clockSetterPre", 2, { color: "rgb(255,0,0)" })
+
+    t1.to("#dateSetter", 2, { color: "rgb(0,255,0)" })
     t1.to("#clockSetter", 2, { color: "rgb(255,0,0)" })
+
+    t1.to("#dateSetterPast", 2, { color: "rgb(0,255,0)" })
+    t1.to("#clockSetterPast", 2, { color: "rgb(255,0,0)" })
+
+    t1.to("#dateSetterPastOut", 2, { color: "rgb(0,255,0)" })
+    t1.to("#clockSetterPastOut", 2, { color: "rgb(255,0,0)" })
 }
