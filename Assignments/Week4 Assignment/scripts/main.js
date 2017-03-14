@@ -1,3 +1,4 @@
+/*
 var clockSetter = document.getElementById("clockSetter");
 var dateSetter = document.getElementById("dateSetter")
 
@@ -55,13 +56,13 @@ setInterval(function(){
     updateTime(clockSetter, dateSetter, utcTime);
 }
 , 1000);
+*/
 
-/*
 var clockSetter = document.getElementById("clockSetter");
 var dateSetter = document.getElementById("dateSetter")
 
 function updateTime(localTime, localDate, utcTime){    
-    computeDateData(utcTime);
+    var dateDataArray = computeDateData(utcTime);
     //update html date
     localDate.innerHTML = dateDataArray[7] + " " + dateDataArray[2] + " " + dateDataArray[1] + " " + dateDataArray[0];
     //update html time
@@ -88,7 +89,7 @@ function computeDateData(utcTime){
         //7
         dayNumberToName(utcTime.getUTCDay())
     ];
-    return dateDataArray[];
+    return dateDataArray;
 }
 
 function dayNumberToName(Tday){
@@ -122,4 +123,3 @@ setInterval(function(){
     updateTime(clockSetter, dateSetter, utcTime);
 }
 , 1000);
-*/
