@@ -1,22 +1,7 @@
 var clockSetter = document.getElementById("clockSetter");
-var dateSetter = document.getElementById("dateSetter");
+var dateSetter = document.getElementById("dateSetter")
 
-var clockSetterPreOut = document.getElementById("clockSetterPreOut");
-var dateSetterPreOut = document.getElementById("dateSetterPreOut");
-
-var clockSetterPre = document.getElementById("clockSetterPre");
-var dateSetterPre = document.getElementById("dateSetterPre");
-
-var clockSetterPast = document.getElementById("clockSetterPast");
-var dateSetterPast = document.getElementById("dateSetterPast");
-
-var clockSetterPastOut = document.getElementById("clockSetterPastOut");
-var dateSetterPastOut = document.getElementById("dateSetterPastOut");
-
-var t1 = new TimelineMax();
-
-function updateTime(elementToChangeDate, elementToChangeClock) {
-    var utcTime = new Date();
+function updateTime(localTime, localDate, utcTime){    
     //day in month
     var Tdate = utcTime.getUTCDate();
     //current year
@@ -34,20 +19,12 @@ function updateTime(elementToChangeDate, elementToChangeClock) {
     //give the day a name
     TdayName = dayNumberToName(Tday);
     //update html date
-
-    //elementToChangeDate.innerHTML = TdayName + " " + Tdate + " " + Tmonth + " " + TfullYear;
+    localDate.innerHTML = TdayName + " " + Tdate + " " + Tmonth + " " + TfullYear;
     //update html time
-    elementToChangeDate.children[0].innerHTML = TdayName;
-    elementToChangeDate.children[1].innerHTML = Tdate;
-    elementToChangeDate.children[2].innerHTML = Tmonth;
-    elementToChangeDate.children[3].innerHTML = TfullYear;
-    //elementToChangeClock.innerHTML = Thours + " " + Tminutes + " " + Tseconds;
-    elementToChangeClock.children[0].innerHTML = Thours;
-    elementToChangeClock.children[1].innerHTML = Tminutes;
-    elementToChangeClock.children[2].innerHTML = Tseconds;
+    localTime.innerHTML = Thours + " " + Tminutes + " " + Tseconds;
 }
 
-function dayNumberToName(Tday) {
+function dayNumberToName(Tday){
     switch (Tday) {
         case 0:
             return "Sunday";
@@ -72,29 +49,77 @@ function dayNumberToName(Tday) {
     }
 }
 
-setInterval(updateTime(dateSetterPreOut, clockSetterPreOut), 100);
-setInterval(updateTime(dateSetterPre, clockSetterPre), 100);
-setInterval(updateTime(dateSetter, clockSetter), 100);
-setInterval(updateTime(dateSetterPast, clockSetterPast), 100);
-setInterval(updateTime(dateSetterPastOut, clockSetterPastOut), 100);
-setInterval(pushTime(), 1000);
-
-
-//start of animation coding
-
-function pushTime() {
-    t1.to("#dateSetterPreOut", 2, { color: "rgb(0,0,0)" })
-    t1.to("#clockSetterPreOut", 2, { color: "rgb(0,0,255)" })
-
-    t1.to("#dateSetterPre", 2, { color: "rgb(0,255,0)" })
-    t1.to("#clockSetterPre", 2, { color: "rgb(255,0,0)" })
-
-    t1.to("#dateSetter", 2, { color: "rgb(0,255,0)" })
-    t1.to("#clockSetter", 2, { color: "rgb(255,0,0)" })
-
-    t1.to("#dateSetterPast", 2, { color: "rgb(0,255,0)" })
-    t1.to("#clockSetterPast", 2, { color: "rgb(255,0,0)" })
-
-    t1.to("#dateSetterPastOut", 2, { color: "rgb(0,255,0)" })
-    t1.to("#clockSetterPastOut", 2, { color: "rgb(255,0,0)" })
+//setInterval(updateTime, 1000, clockSetter, dateSetter);
+setInterval(function(){
+    var utcTime = new Date();
+    updateTime(clockSetter, dateSetter, utcTime);
 }
+, 1000);
+
+/*
+var clockSetter = document.getElementById("clockSetter");
+var dateSetter = document.getElementById("dateSetter")
+
+function updateTime(localTime, localDate, utcTime){    
+    computeDateData(utcTime);
+    //update html date
+    localDate.innerHTML = dateDataArray[7] + " " + dateDataArray[2] + " " + dateDataArray[1] + " " + dateDataArray[0];
+    //update html time
+    localTime.innerHTML = dateDataArray[4] + " " + dateDataArray[5] + " " + dateDataArray[6];
+}
+
+function computeDateData(utcTime){
+    //array with all data going year to seconds
+    var dateDataArray = [
+        //0
+        utcTime.getUTCFullYear(),
+        //1
+        utcTime.getUTCMonth(),
+        //2
+        utcTime.getUTCDate(),
+        //3
+        utcTime.getUTCDay(),
+        //4
+        utcTime.getUTCHours(),
+        //5
+        utcTime.getUTCMinutes(),
+        //6
+        utcTime.getUTCSeconds(),
+        //7
+        dayNumberToName(utcTime.getUTCDay())
+    ];
+    return dateDataArray[];
+}
+
+function dayNumberToName(Tday){
+    switch (Tday) {
+        case 0:
+            return "Sunday";
+            break;
+        case 1:
+            return "Monday";
+            break;
+        case 2:
+            return "Tuesday";
+            break;
+        case 3:
+            return "Wednesday";
+            break;
+        case 4:
+            return "Thursday";
+            break;
+        case 5:
+            return "Friday";
+            break;
+        case 6:
+            return "Saturday";
+    }
+}
+
+//setInterval(updateTime, 1000, clockSetter, dateSetter);
+setInterval(function(){
+    var utcTime = new Date();
+    updateTime(clockSetter, dateSetter, utcTime);
+}
+, 1000);
+*/

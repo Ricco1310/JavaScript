@@ -1,36 +1,9 @@
 body{
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	color: darkred;
+	color: #FFFFFF;
 	background-color: dimgray;
-	padding: 0;
-	margin: 0;
-	font-size: 100px;
 }
-.clockContainer{
-	display: inline-flex;
-	display: -webkit-inline-flex;
-	width: 100%;
-	height: 100px;
-	justify-content: center;
-	position: absolute;
-}
-
-#clockSetterPreOut, #clockSetterPre, #clockSetter, #clockSetterPast, #clockSetterPastOut{
-	margin-left: 100px;
-}
-
-#container0{
-	top: -100px;
-}
-#container1{
-	top: 100px;
-}
-#container2{
-	top: 300px;
-}
-#container3{
-	top: 500px;
-}
-#container4{
-	top: 700px;
+p{
+	font-size: 10vh;
+	color: darkred;
 }
