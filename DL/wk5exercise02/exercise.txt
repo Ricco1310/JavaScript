@@ -1,0 +1,14 @@
+
+We are extending our own JavaScript clock and added some structure for you. 
+
+The second step is to display the current time in 24-hour notation with the column in between the hours and minutes and seconds (e.g. 15:31:01). 
+
+Create a seperate function that returns an associative array (with named indexes). 
+
+Each index contains the respective time; hours and minutes and seconds. 
+
+You need to add the missing leading zeros when the integers are less then the value 10. 
+
+We will extend our code in the next exercise.
+
+

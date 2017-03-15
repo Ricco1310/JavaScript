@@ -1,0 +1,5 @@
+
+We are building our own JavaScript clock. The first step is to display the current time in the h1#clock. Please use the ToTimeString method to display the full time object.
+
+
+

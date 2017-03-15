@@ -1,0 +1,11 @@
+
+We are going to calculate the how many days you are studying. First get the current date and add the start date of your school year, e.g. 22-08-2016. 
+
+Calculate difference and get a positive number using the Math.abs function. 
+
+Please also use the Math.round function for nice rounded days. 
+
+Then render days in the #days span.
+
+Hint:
+1 day in milliseconds -> hours * minutes * seconds * milliseconds. 

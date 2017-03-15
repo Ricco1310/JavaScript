@@ -1,0 +1,6 @@
+
+Add the code from the video tutorial to make the : in between the time integers flash and toggle on and off each second. We helped you and added the function with the current seconds. Here you can place your code and return the html needed for the separator.
+
+You must use the same class name "trans" in a <span> element around the seperator as used in the video.
+
+

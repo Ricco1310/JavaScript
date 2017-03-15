@@ -1,0 +1,23 @@
+
+body {
+	font-family: Helvetica;
+	color: #fff;
+	background: #111;
+	text-align: center;
+}
+
+h1 {
+	font-size: 100px;
+	position: relative;
+	text-transform: uppercase; 
+	text-shadow: 1px 1px 0 rgb(150,150,150);
+}
+
+h1 span#text {
+	display: block;
+	font-size: 50px;
+}
+
+h1 span#days {
+	color: red;
+}

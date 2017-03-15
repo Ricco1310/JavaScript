@@ -1,9 +1,18 @@
+*{
+	padding: 0;
+	margin: 0;
+}
 body{
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	color: #FFFFFF;
+	color: darkred;
+	background-image: url("../mars_outflow_mud.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
 	background-color: dimgray;
 }
-p{
-	font-size: 10vh;
+#clockSetter{
+	overflow: hidden;
+	text-align: center;
+	font-size: 150px;
 	color: darkred;
 }
