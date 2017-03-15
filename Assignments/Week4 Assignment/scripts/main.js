@@ -55,10 +55,11 @@ function animateClock(){
 }
 
 //setInterval(updateTime, 1000, clockSetter, dateSetter);
-setInterval(function(){
-    var utcTime = new Date();
-    updateTime(clockSetter, dateSetter, utcTime);
+window.onload = function(){
+    setInterval(function(){
+        var utcTime = new Date();
+        updateTime(clockSetter, dateSetter, utcTime);
+    }, 500);
+    animateClock();
 }
-, 500);
-
-animateClock();
+;
