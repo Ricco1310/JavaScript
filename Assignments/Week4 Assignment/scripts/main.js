@@ -1,16 +1,17 @@
 var clockSetter = document.getElementById("clockSetter");
 var dateSetter = document.getElementById("dateSetter");
-var t1 = new TimelineMax({repeat: -1});
+var t1 = new TimelineMax();
+var t2 = new TimelineMax();
 
-function updateTime(localTime, localDate, utcTime){    
+function updateTime(localTime, localDate, utcTime) {
     var dateDataArray = computeDateData(utcTime);
     //update html date
-    localDate.innerHTML = dateDataArray[7] + " " + dateDataArray[2] + "-" + dateDataArray[1] + "-" + dateDataArray[0];
+    //localDate.innerHTML = dateDataArray[7] + " " + dateDataArray[2] + "-" + dateDataArray[1] + "-" + dateDataArray[0];
     //update html time
     localTime.innerHTML = dateDataArray[4] + ":" + dateDataArray[5] + ":" + dateDataArray[6];
 }
 
-function computeDateData(utcTime){
+function computeDateData(utcTime) {
     //array with all data going year to seconds
     var dateDataArray = [
         //0
@@ -30,36 +31,46 @@ function computeDateData(utcTime){
         //7
         dayNumberToName(utcTime.getUTCDay())
     ];
-    for (var i = 0; i < dateDataArray.length; i++){
-        if (dateDataArray[i]<10){
+    for (var i = 0; i < dateDataArray.length; i++) {
+        if (dateDataArray[i] < 10) {
             dateDataArray[i] = "0" + dateDataArray[i];
         }
     }
     return dateDataArray;
 }
 
-function dayNumberToName(dayNumber){
+function dayNumberToName(dayNumber) {
     var dayNameArray = ["Sunday",
-                        "Monday",
-                        "Tuesday",
-                        "Wednesday",
-                        "Thursday",
-                        "Friday",
-                        "Saturday"];
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"];
     return dayNameArray[dayNumber];
 }
 
-function animateClock(){
-    t1.to("#clockSetter", 1, {fontSize:300})
-    .to("#clockSetter", 1, {fontSize:150})
+function animateClock(utcTime) {
+    if (utcTime.getUTCSeconds() % 2 == 0) {
+        t1.to("#clockSetter", 0.5, { scale: 2 })
+    } else {
+        t1.to("#clockSetter", 0.5, { scale: 1 })
+    }
+    if (utcTime.getUTCMinutes() % 2 == 0) {
+        t2.to("#backgroundImage", 10, { opacity: 0.2 })
+    } else if(utcTime.getUTCMinutes() % 2 == 1) {
+        t2.to("#backgroundImage", 10, { opacity: 1 })
+    }
 }
 
+
 //setInterval(updateTime, 1000, clockSetter, dateSetter);
-window.onload = function(){
-    setInterval(function(){
+window.onload = function () {
+    setInterval(function () {
         var utcTime = new Date();
         updateTime(clockSetter, dateSetter, utcTime);
+        animateClock(utcTime);
     }, 500);
-    animateClock();
+
 }
-;
+    ;

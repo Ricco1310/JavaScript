@@ -1,17 +1,28 @@
-*{
-	padding: 0;
-	margin: 0;
-}
 body{
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	color: darkred;
-	background-image: url("../mars_outflow_mud.jpg");
+	margin: 0;
+	padding: 0;
 	background-size: 100%;
 	background-repeat: no-repeat;
-	background-color: dimgray;
+	background-color: black;
+	overflow: hidden;
+	height: 100vh;
+}
+#backgroundImage{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100vw;
+	height: 100vh;
+	background-image: url("../mars_outflow_mud.jpg");
+	opacity: 0.2;
 }
 #clockSetter{
-	overflow: hidden;
+	position: relative;
+	z-index: 2;
+	margin-top: 30vh;
 	text-align: center;
 	font-size: 150px;
 	color: darkred;
