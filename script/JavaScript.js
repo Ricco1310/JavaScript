@@ -28,8 +28,29 @@ function updateUISucces(responseText) {
     console.log("ok");
     var currentWeather = JSON.parse(request.responseText);
     var temp = currentWeather.main.temp - 272.15;
-    Math.round(temp);
+    temp = roundTo(temp, 2);
     tempElement.innerHTML = temp;
+    
+    function roundTo(number, multi){
+        switch(multi){
+            case 1:
+                decimal = 10;
+                break;
+            case 2:
+                decimal = 100;
+                break;
+            case 3:
+                decimal = 1000;
+                break;
+            case 4:
+                decimal = 10000;
+                break;
+        }
+        number *= decimal;
+        number = Math.round(number);
+        number /= decimal;
+        return number;
+    }
 }
 
 function updateUIError() {
