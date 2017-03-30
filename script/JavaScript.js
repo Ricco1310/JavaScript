@@ -28,24 +28,12 @@ function updateUISucces(responseText) {
     console.log("ok");
     var currentWeather = JSON.parse(request.responseText);
     var temp = currentWeather.main.temp - 272.15;
-    temp = roundTo(temp, 2);
+    temp = roundTo(temp, 3);
     tempElement.innerHTML = temp;
-    
+
     function roundTo(number, multi){
-        switch(multi){
-            case 1:
-                decimal = 10;
-                break;
-            case 2:
-                decimal = 100;
-                break;
-            case 3:
-                decimal = 1000;
-                break;
-            case 4:
-                decimal = 10000;
-                break;
-        }
+        var decimal = 10;
+        decimal = decimal * multi;
         number *= decimal;
         number = Math.round(number);
         number /= decimal;
