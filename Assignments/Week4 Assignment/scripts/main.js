@@ -56,10 +56,20 @@ function animateClock(utcTime) {
     } else {
         t1.to("#clockSetter", 0.5, { scale: 1 })
     }
-    if (utcTime.getUTCMinutes() % 2 == 0) {
-        t2.to("#backgroundImage", 10, { opacity: 0.2 })
-    } else if(utcTime.getUTCMinutes() % 2 == 1) {
-        t2.to("#backgroundImage", 10, { opacity: 1 })
+}
+function animateBackground(utcTime) {
+    var opacityAnimating = false;
+    if(utcTime.getUTCSeconds() % 10 == 0){
+        opacityAnimating = !opacityAnimating;
+        console.log(42);
+        
+    }
+    if (opacityAnimating) {
+        console.log("Opacity low");
+        t2.to("#backgroundImage", 1, { opacity: 0.2 })
+    } else {
+        console.log("Opacity update");
+        t2.to("#backgroundImage", 1, { opacity: 1 })
     }
 }
 
@@ -70,6 +80,7 @@ window.onload = function () {
         var utcTime = new Date();
         updateTime(clockSetter, dateSetter, utcTime);
         animateClock(utcTime);
+        animateBackground(utcTime);
     }, 500);
 
 }
