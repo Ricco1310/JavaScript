@@ -1,16 +1,29 @@
 var request;
-var weatherElement = document.getElementById("temp");
+var weatherTempElement = document.getElementById("temp");
+var placeNameElement = document.getElementById("name");
+var Astana = { Country: "Kazakhstan",
+                flag: "https://upload.wikimedia.org/wikipedia/commons/d/d3/Flag_of_Kazakhstan.svg",
+                lnglat: { lat: 51.144695, lng: 71.478844 },
+                name,
+                temp,
+                roundTemp: function(){
+                    this.temp *= 100;
+                    this.temp = Math.round(this.temp);
+                    this.temp /= 100;
+                    return this.temp;
+                },
+                funFact1: "Wondering how to say the name of this vibrant city? It’s pronounced As-tah-nuh." };
 
 makeRequest();
 
 function makeRequest() {
     request = new XMLHttpRequest();
-    request.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=5ca1a1bb78a4056d2fc623093688fa89");
-    request.onreadystatechange = responseMethod;
+    request.open("GET", "http://api.openweathermap.org/data/2.5/weather?id=1526273&units=metric&appid=5ca1a1bb78a4056d2fc623093688fa89");
+    request.onreadystatechange = respond;
     request.send();
 }
 
-function responseMethod() {
+function respond() {
     if (request.readyState == 4) {
         if (request.status == 200) {
             updateUISucces(request.responseText);
@@ -25,11 +38,13 @@ function responseMethod() {
 function updateUISucces(responseText) {
     console.log("ok");
     var currentWeather = JSON.parse(request.responseText);
-    var temp = currentWeather.main.temp - 272.15;
-    temp *= 100;
-    temp = Math.round(temp);
-    temp /= 100;
-    weatherElement.innerHTML = temp;
+    Astana.temp = currentWeather.main.temp;
+    Astana.name = currentWeather.name;
+    Astana.temp = Astana.roundTemp();
+    console.log(currentWeather);
+
+    weatherTempElement.innerHTML = Astana.temp;
+    placeNameElement.innerHTML = Astana.name;
 }
 
 function updateUIError() {
@@ -37,22 +52,12 @@ function updateUIError() {
 }
 
 function initMap() {
-    var place = 0;
-    var bamako = {lat: 12.612582, lng: -8.0655534};
-    var astana = {lat: 51.144695, lng: 71.478844};
-    var ola = {lat: 59.5802402, lng: 151.2781806};
-
-    var p = [
-         {lat: 12.612582, lng: -8.0655534},
-         {lat: 51.144695, lng: 71.478844},
-         {lat: 59.5802402, lng: 151.2781806}
-    ];
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 4,
-        center: p[0]
+        zoom: 6,
+        center: Astana.lnglat
     });
     var marker = new google.maps.Marker({
-        position: p[0],
+        position: Astana.lnglat,
         map: map
     });
 }

@@ -2,12 +2,39 @@
 body{
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	color: white;
+	padding: 0;
+	margin: 0;
 	background-color: dimgrey;
 }
-
-#map{
-	height: 400px;
-	width: 400px;
-	margin-right: 200px;
+#landingBanner{
+	display: inline-block;
+	width: 840px;
+	overflow: hidden;
+}
+#landingBanner h1{
+	display: block;
+	margin: auto;
+	width: 200px;
+	text-align: center;
+	padding: 10px 0;
 	float: left;
+	margin: 0 20px;
+	border: 5px solid darkred;
+	cursor: pointer;
+}
+.active{
+	background-color: darkslategray;
+}
+#locationInformation{
+}
+.underline{
+	border-bottom: 5px solid darkred;
+}
+#map{
+	display: inline-block;
+	height: 600px;
+	width: 600px;
+	margin-left: 100px;
+	margin-right: 200px;
+
 }

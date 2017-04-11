@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Landing Map</title>
-		<link rel="stylesheet" type="text/css" href="styles/mystyle.css">
-	</head>
-	<body>
-		<h1>Possible landing sites</h1>
-		<div id="map"></div>
-		<form id="selectCity">
-			<input type="radio" value="Bamako" checked id="bamako">Bamako<br>
-			<input type="radio" value="Kazachstan" id"kazachstan">Kazachstan<br>
-			<input type="radio" value="Siberia" id="siberia">Siberia<br>
-			<input type="submit" value="submit">
-		</form>
-		<h3 id="cityName">London</h3>
-		<p>Temprature: <span id="temp"></span></p>
-		<script src="scripts/main.js"></script>
-		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCv_zt_kkeFEDymkEcpLe3I0guapBr2nIc &callback=initMap"></script>
 
-	</body>
+<head>
+	<meta charset="utf-8">
+	<title>Landing Map</title>
+	<link rel="stylesheet" type="text/css" href="styles/mystyle.css">
+</head>
+
+<body>
+	<h1>Possible landing sites</h1>
+	<section id="map"></section>
+	<section id="landingBanner">
+		<h1 id="bamako" class="active">bamako</h1>
+		<h1 id="astana">astana</h1>
+		<h1 id="ola">ola</h1>
+	</section>
+	<section id="locationInformation">
+		<h1 class="underline">Location Information</h1>
+		<p>Temperature: <span id="temp"></span></p>
+		<p>Placename: <span id="name"></span></p>
+	</section>
+	<script src="scripts/main.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCv_zt_kkeFEDymkEcpLe3I0guapBr2nIc &callback=initMap"></script>
+
+</body>
+
 </html>
