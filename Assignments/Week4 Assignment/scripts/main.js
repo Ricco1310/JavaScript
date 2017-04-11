@@ -59,15 +59,15 @@ function animateClock(utcTime) {
 }
 function animateBackground(utcTime) {
     var opacityAnimating = false;
-    if(utcTime.getUTCSeconds() % 10 == 0){
+    /*if(utcTime.getUTCSeconds() % 10 == 0){
         opacityAnimating = !opacityAnimating;
         console.log(42);
         
-    }
-    if (opacityAnimating) {
+    }*/
+    if (utcTime.getUTCSeconds % 10 == 0) {
         console.log("Opacity low");
         t2.to("#backgroundImage", 1, { opacity: 0.2 })
-    } else {
+    } else if(utcTime.getUTCSeconds % 5 == 0 && utcTime.getUTCSeconds % 10 == 0) {
         console.log("Opacity update");
         t2.to("#backgroundImage", 1, { opacity: 1 })
     }

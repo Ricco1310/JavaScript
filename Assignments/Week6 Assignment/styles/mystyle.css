@@ -1,6 +1,13 @@
 
 body{
-	font-family: helvetica;
-	color: #FFFFFF;
-	background-color: #444444;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: white;
+	background-color: dimgrey;
+}
+
+#map{
+	height: 400px;
+	width: 400px;
+	margin-right: 200px;
+	float: left;
 }
