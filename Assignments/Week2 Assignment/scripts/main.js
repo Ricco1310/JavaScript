@@ -52,7 +52,6 @@ function starLog(){
     var latestDate = document.getElementById("latestDate");
     var latestMessage = document.getElementById("latestMessage");
     starlog.onsubmit = function(){
-        alert(0);
         latestName.innerHTML = formName.value;
         latestDate.innerHTML = formDate.value;
         latestMessage.innerHTML = formMessage.value;
