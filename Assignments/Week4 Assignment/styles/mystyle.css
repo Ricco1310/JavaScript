@@ -17,7 +17,6 @@ body{
 	width: 100vw;
 	height: 100vh;
 	background-image: url("../mars_outflow_mud.jpg");
-	opacity: 0.2;
 }
 #clockSetter{
 	position: relative;
