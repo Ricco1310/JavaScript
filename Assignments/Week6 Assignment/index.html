@@ -11,14 +11,19 @@
 	<h1>Possible landing sites</h1>
 	<section id="map"></section>
 	<section id="landingBanner">
-		<h1 id="bamako" class="active">bamako</h1>
-		<h1 id="astana">astana</h1>
-		<h1 id="ola">ola</h1>
+		<h1 id="astana" class="active">Astana</h1>
+		<h1 id="bamako">Bamako</h1>
+		<h1 id="magadan">Magadan</h1>
 	</section>
 	<section id="locationInformation">
 		<h1 class="underline">Location Information</h1>
+		<img src="" alt="Country Flag" id="countryFlag">
+			<p>Placename: <span id="name"></span></p>
+		<p>Country: <span id="country"></span></p>
 		<p>Temperature: <span id="temp"></span></p>
-		<p>Placename: <span id="name"></span></p>
+		<p>Temperature minimum: <span id="tempMin"></span> maximum: <span id="tempMax"></span></p>
+		<p>Weather: <span id="weatherType"></span></p>
+		<p>Fun fact: <span id="funFact"></span></p>
 	</section>
 	<script src="scripts/main.js"></script>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCv_zt_kkeFEDymkEcpLe3I0guapBr2nIc &callback=initMap"></script>
