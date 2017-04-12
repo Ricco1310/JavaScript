@@ -267,7 +267,9 @@ function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 6,
         center: Astana.lnglat,
-        styles: blueStyle
+        styles: blueStyle,
+        disableDefaultUI: true,
+        zoomControl: true,
     });
 
     //the text boxes's content

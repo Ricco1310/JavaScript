@@ -2,22 +2,26 @@
 body{
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	color: white;
+	padding: 0;
+	margin: 0;
 	background-color: dimgray;
 }
 #infoBox{
 	color: black;
 }
 #landingBanner{
-	display: inline-block;
 	width: 840px;
 	overflow: hidden;
 }
+h1{
+	margin: 10px;
+}
 #landingBanner h1{
 	display: block;
-	margin: auto;
 	width: 200px;
 	text-align: center;
 	padding: 10px 0;
+	margin: 0;
 	float: left;
 	margin: 0 20px;
 	border: 5px solid darkred;
@@ -34,13 +38,11 @@ body{
 #countryFlag{
 	float: right;
 	width: 600px;
-	margin-left: 50px;
+	margin: 0 50px;
 }
 #map{
 	float: left;
-	display: inline-block;
 	height: 600px;
 	width: 600px;
-	margin-left: 100px;
 	margin-right: 200px;
 }
