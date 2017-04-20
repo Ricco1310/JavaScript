@@ -43,8 +43,7 @@
         but is not a part of the assignment.
     </p>
     <p>
-        A link to the PDF version of the website can be downloaded <a href="portfolio_and_assignments.pdf" download="portfolio_Riccardo">here</a>.<br>
-        A zip file containing all files can be downloaded <a href="Assignments.rar" download="website_riccardo">here</a>.
+        A link to the PDF version of the website can be downloaded <a href="portfolio_and_assignments.pdf" download="portfolio_Riccardo">here</a>.<br>        A zip file containing all files can be downloaded <a href="Assignments.rar" download="website_riccardo">here</a>.
     </p>
     <section>
         <h1>
@@ -106,27 +105,23 @@
             Recapitulation of the lectures
         </h3>
         <p>
-            During the first three weeks I mostly had to fresh up my knowledge of JavaScript, seeing as I already knew it, but hadn’t
-            used it in over half a year. The first lecture as such consisted of paying attention to the syntax used to remember
-            the correct way of programming in JavaScript, such as the var declarations, the way conditionals are written
-            (which was pretty much the same as I remembered it) and set me up for further self-study. After week 1 had passed
-            I had already started reading up on the topics for week 2 and 3. As such I went well prepared into week 2 and
-            3, where I typed along during the lecture and tried to add extra features to see how the page would respond.
-            Due to this I deepened my understanding of the complex data types and DOM manipulation.
-        </p>
+            In the week 4 lectures we learned about animating, for this we used the greensocks API. This was a part of JavaScript that
+            I had never used before, or any API in general. As such this was the first time that I learned something really
+            new. I didn’t have much trouble with it however, as the greensocks API is very understandable in its functions.
+            The week 5 lecture consisted of timekeeping using the Date object, during this week I learned new tips and tricks
+            on how to store and use this Date object, such as how to call multiple functions with multiple variables in an
+            interval loop, as this was something that I didn’t know before. </p>
         <h3>
             Description of assignment
         </h3>
         <p>
-            The first assignment we had to make was an interface that a user could gather “real-time” information from. For this we had
-            to access the DOM and manipulate it to do specific actions. For mine I decided to make a bound, pseudo-random
-            number generator that makes a speedometer fluctuate up and down, but tries to balance it around the 10000 mark.
-            I used this number to increment a distance travelled number. Secondly I created a form that the user could fill
-            in. Once filled in, the next field will present the message typed by the user. Thirdly I implemented a simple
-            UTC clock. Lastly I created an image that, once mouse over will present some text to the user, this is all done
-            through JavaScript. I implemented the various elements from the lectures in the assignment through the various
-            event listeners, such as changing the time on click. And conditionals that contain the rest of the elements,
-            such as the pulsating only operating on modulo.
+            The second assignment that I created was to be an animated, working, representative clock. As such we had to use the greensocks
+            API and the Date object. I decided to try and implement a very clean and efficient code to try and experiment
+            with how trimmed down I could get the file. As of writing this, the line count stands at 61 lines of code, including
+            empty separator lines and broken up arrays. I placed these all in an interval loop as learned in class, but since
+            I wanted multiple functions to run in parallel, each with their own parameters, I had to find another way. Which
+            I did with the anonymous function method. I then used greensocks to animate the clock in a pulsating method,
+            reverting scale direction every second using a conditional that checks for the modulo of the time.
         </p>
         <h3>
             Result
