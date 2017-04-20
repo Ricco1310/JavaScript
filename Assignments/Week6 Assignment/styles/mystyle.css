@@ -37,7 +37,7 @@ body{
 	color: black;
 }
 #landingBanner{
-	width: 840px;
+	width: 100vw;
 	overflow: hidden;
 }
 h1{
@@ -45,7 +45,7 @@ h1{
 }
 #landingBanner h1{
 	display: block;
-	width: 200px;
+	min-width: 200px;
 	text-align: center;
 	padding: 10px 0;
 	margin: 0;

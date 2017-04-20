@@ -11,6 +11,7 @@ var funFactElement = document.getElementById("funFact");
 var bamakoButton = document.getElementById("bamako");
 var astanaButton = document.getElementById("astana");
 var magadanButton = document.getElementById("magadan");
+var bestSpotButton = document.getElementById("findBest");
 
 var Astana = {
     country: "Republic of Kazakhstan",
@@ -333,7 +334,6 @@ function initMap() {
         map.panTo(Bamako.lnglat);
         placeNameElement.innerHTML = Bamako.name;
         weatherTempElement.innerHTML = Bamako.temp;
-        //initMap();
     });
 
     astanaButton.addEventListener("click", function () {
@@ -343,7 +343,6 @@ function initMap() {
         map.panTo(Astana.lnglat);
         placeNameElement.innerHTML = Astana.name;
         weatherTempElement.innerHTML = Astana.temp;
-        //initMap();
     });
 
     magadanButton.addEventListener("click", function () {
@@ -353,6 +352,35 @@ function initMap() {
         map.panTo(Magadan.lnglat);
         placeNameElement.innerHTML = Magadan.name;
         weatherTempElement.innerHTML = Magadan.temp;
-        //initMap();
+    });
+    bestSpotButton.addEventListener("click", function () {
+        var tempArray = [Bamako.temp, Astana.temp, Magadan];
+        if (tempArray[0] == Bamako.temp) {
+            bamakoButton.className = "active";
+            astanaButton.className = "";
+            magadanButton.className = "";
+            map.panTo(Bamako.lnglat);
+            placeNameElement.innerHTML = Bamako.name;
+            weatherTempElement.innerHTML = Bamako.temp;
+        }
+        else if (tempArray[0] == Astana.temp) {
+            bamakoButton.className = "";
+            astanaButton.className = "active";
+            magadanButton.className = "";
+            map.panTo(Astana.lnglat);
+            placeNameElement.innerHTML = Astana.name;
+            weatherTempElement.innerHTML = Astana.temp;
+        }
+        else if (tempArray[0] == Magadan.temp) {
+            bamakoButton.className = "";
+            astanaButton.className = "";
+            magadanButton.className = "active";
+            map.panTo(Magadan.lnglat);
+            placeNameElement.innerHTML = Magadan.name;
+            weatherTempElement.innerHTML = Magadan.temp;
+        }
+        else {
+            alert("Something went wrong, try one of the other buttons");
+        }
     });
 }
