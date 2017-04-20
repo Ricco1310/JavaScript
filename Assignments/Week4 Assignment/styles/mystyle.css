@@ -9,6 +9,33 @@ body{
 	overflow: hidden;
 	height: 100vh;
 }
+#header{
+	position: absolute;
+	z-index: 10;
+	top: 10px;
+	right: 10px;
+}
+#header ul{
+	margin: 0 auto;
+}
+#header li{
+	width: 10vw;
+	padding: 10px 0;
+	margin: 0 2vw;
+	float: left;
+	list-style-type: none;
+	text-decoration: none;
+	background-color: skyblue;
+	border: 5px solid darkblue;
+	color: black;
+	text-align: center;
+}
+#header li:hover{
+	background-color: blueviolet;
+}
+#currentPage{
+	background-color: blueviolet;
+}
 #backgroundImage{
 	position: absolute;
 	top: 0;
@@ -17,6 +44,8 @@ body{
 	width: 100vw;
 	height: 100vh;
 	background-image: url("../mars_outflow_mud.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
 }
 #clockSetter{
 	position: relative;

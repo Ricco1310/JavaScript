@@ -1,87 +1,116 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>ITSI</title>
-		<link rel="stylesheet" type="text/css" href="styles/mystyle.css">
-	</head>
-	<body>
-		<header class="header">
-			<h1 class="branding">
-				<span>I</span>nterplanetary
-				<span>T</span>ransport
-				<span>S</span>huttle
-				<span>I</span>nterface
-			</h1>
-		</header>
-		<main class="maininterface">
-			<article class="windowSize50">
-				<section>
-					<h2>
-						Ship status
-					</h2>
-					<h3>
-						Current Speed: <span id="currentSpeed">10000</span> M/S
-					</h3>
-					<h3>
-						Distance: <span id="currentDistance">0</span>/62100000000 Meters
-					</h3>
-					<h3>
-						Fuel: <span id="currentFuel">100</span>%
-					</h3>
-				</section>
-				<section>
-					<h2>
-						Information
-					</h2>
-					<h3>
-						Water Supplies: <span id="wSupplies">1000000</span> Items
-					</h3>
-					<h3>
-						Food Supplies: <span id="fSupplies">1000000</span> Items
-					</h3>
-					<h3>
-						Earth Time: <span id="earthTime"></span>
-					</h3>
-				</section>
-			</article>
-			<article class="windowSize33">
-				<section>
-					<h2>
-						Starlog
-					</h2>
-					<form id="form">
-						Name:<br>
-						<input id="formName" type="text" placeholder="Name" required autocomplete="off"><br>
-						Date:<br>
-						<input id="formDate" type="date" placeholder="DD-MM-YYYY" required autocomplete="off"><br>
-						Message:<br>
-						<textarea id="formMessage" placeholder="Message" required autocomplete="off"></textarea><br>
-						<input type="submit" value="Submit">
-					</form>
-				</section>
-				<section>
-					<h2>
-						Latest Starlogs
-					</h2>
-					<p id="latestName"></p>
-					<p id="latestDate"></p>
-					<p id="latestMessage"></p>
-				</section>
-				<section>
-					<h2>
-						Estimated landing zone
-					</h2>
-					<div class="landingImage" id="landingImage">
-						<div class="landingText" id="landingText">
-							The Olympus Crater. Mankinds first settlement on Mars, and soon the place where you will live!
-						</div>
+
+<head>
+	<meta charset="utf-8">
+	<title>ITSI</title>
+	<link rel="stylesheet" type="text/css" href="styles/mystyle.css">
+</head>
+
+<body>
+	<section id="header">
+		<nav>
+			<ul>
+				<a href="..\portfolio.html">
+					<li id="currentPage">
+						Portfolio home
+					</li>
+				</a>
+				<a href="..\Week2 Assignment\index.html">
+					<li>
+						Assignment 1
+					</li>
+				</a>
+				<a href="..\Week4 Assignment\index.html">
+					<li>
+						Assignment 2
+					</li>
+				</a>
+				<a href="..\Week6 Assignment\index.html">
+					<li>
+						Assignment 3
+					</li>
+				</a>
+			</ul>
+		</nav>
+	</section>
+	<header class="header">
+		<h1 class="branding">
+			<span>I</span>nterplanetary
+			<span>T</span>ransport
+			<span>S</span>huttle
+			<span>I</span>nterface
+		</h1>
+	</header>
+	<main class="maininterface">
+		<article class="windowSize50">
+			<section>
+				<h2>
+					Ship status
+				</h2>
+				<h3>
+					Current Speed: <span id="currentSpeed">10000</span> M/S
+				</h3>
+				<h3>
+					Distance: <span id="currentDistance">0</span>/62100000000 Meters
+				</h3>
+				<h3>
+					Fuel: <span id="currentFuel">100</span>%
+				</h3>
+			</section>
+			<section>
+				<h2>
+					Information
+				</h2>
+				<h3>
+					Water Supplies: <span id="wSupplies">1000000</span> Items
+				</h3>
+				<h3>
+					Food Supplies: <span id="fSupplies">1000000</span> Items
+				</h3>
+				<h3>
+					Earth Time: <span id="earthTime"></span>
+				</h3>
+			</section>
+		</article>
+		<article class="windowSize33">
+			<section>
+				<h2>
+					Starlog
+				</h2>
+				<form id="form">
+					Name:<br>
+					<input id="formName" type="text" placeholder="Name" required autocomplete="off"><br> Date:
+					<br>
+					<input id="formDate" type="date" placeholder="DD-MM-YYYY" required autocomplete="off"><br> Message:
+					<br>
+					<textarea id="formMessage" placeholder="Message" required autocomplete="off"></textarea><br>
+					<input type="submit" value="Submit">
+				</form>
+			</section>
+			<section>
+				<h2>
+					Latest Starlogs
+				</h2>
+				<p id="latestName"></p>
+				<p id="latestDate"></p>
+				<p id="latestMessage"></p>
+			</section>
+			<section>
+				<h2>
+					Estimated landing zone
+				</h2>
+				<div class="landingImage" id="landingImage">
+					<div class="landingText" id="landingText">
+						The Olympus Crater. Mankinds first settlement on Mars, and soon the place where you will live!
 					</div>
-				</section>
-			</article>
-		</main>
-		<footer class="footer">
-		</footer>
-		<script src="scripts/main.js"></script>
-	</body>
+				</div>
+			</section>
+		</article>
+	</main>
+	<footer class="footer">
+	</footer>
+	<script src="scripts/main.js"></script>
+</body>
+
 </html>
